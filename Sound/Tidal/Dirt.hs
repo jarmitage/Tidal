@@ -71,7 +71,7 @@ dirtSlang = OscSlang {
 superDirtSlang = dirtSlang { timestamp = BundleStamp, path = "/play2", namedParams = True }
 
 superDirtBackend port = do
-  s <- makeConnection "127.0.0.1" port superDirtSlang
+  s <- makeConnection "192.168.7.2" port superDirtSlang
   return $ Backend s (\_ _ _ -> return ())
 
 superDirtState port = do
